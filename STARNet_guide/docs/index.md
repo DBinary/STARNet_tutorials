@@ -20,4 +20,5 @@ For more in-depth information about STARNet, you can also read our manuscript (o
 - Lei Hu ([hulei@westlake.edu.cn](mailto:hulei@westlake.edu.cn))
 - Shichen Zhang ([zhangshichen@westlake.edu.cn](mailto:zhangshichen@westlake.edu.cn))
 - Xuting Zhang ([zhangxuting@westlake.edu.cn](mailto:zhangxuting@westlake.edu.cn))
+- Yihai Luo ([luoyihai@westlake.edu.cn](mailto:luoyihai@westlake.edu.cn))
 </div>
