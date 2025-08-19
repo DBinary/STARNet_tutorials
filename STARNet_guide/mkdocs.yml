@@ -13,11 +13,11 @@ nav:
         - GRN Inference: tutorials/Tutorial_2_GRN_Inference.ipynb
         - Spatial Trajectory: tutorials/Tutorial_2_Spatial_Trajectory.ipynb
     - GWAS Analysis:
-        - GRN Inference: tutorials/Tutorial_4_GRN_Inference.ipynb
-        - GWAS Analysis: tutorials/Tutorial_4_GWAS_Analysis.ipynb
-    - Drug Response:
         - GRN Inference: tutorials/Tutorial_3_GRN_Inference.ipynb
-        - Drug Response: tutorials/Tutorial_3_Drug_Response.ipynb
+        - GWAS Analysis: tutorials/Tutorial_3_GWAS_Analysis.ipynb
+    - Drug Response:
+        - GRN Inference: tutorials/Tutorial_4_GRN_Inference.ipynb
+        - Drug Response: tutorials/Tutorial_4_Drug_Response.ipynb
 
 plugins:
   - mkdocs-jupyter:
