@@ -1,0 +1,67 @@
+site_name: STARNet Readthedocs
+repo_url: https://github.com/lxzcpro/STARNet
+site_author: "Lei Hu, Shichen Zhang, Xuting Zhang, Yihai Luo, and others"
+copyright: "Copyright &copy; 2025, AICB Lab, Westlake University"
+
+nav:
+- Index: index.md
+- Installation Guide: installation_guide.md
+- Tutorials:
+    - GRN Inference:
+        - GRN Inference: tutorials/Tutorial_1_GRN_Inference.ipynb
+    - Spatial Trajectory:
+        - GRN Inference: tutorials/Tutorial_2_GRN_Inference.ipynb
+        - Spatial Trajectory: tutorials/Tutorial_2_Spatial_Trajectory.ipynb
+    - GWAS Analysis:
+        - GRN Inference: tutorials/Tutorial_4_GRN_Inference.ipynb
+        - GWAS Analysis: tutorials/Tutorial_4_GWAS_Analysis.ipynb
+    - Drug Response:
+        - GRN Inference: tutorials/Tutorial_3_GRN_Inference.ipynb
+        - Drug Response: tutorials/Tutorial_3_Drug_Response.ipynb
+
+plugins:
+  - mkdocs-jupyter:
+      include_requirejs: true
+  - mermaid2
+  - glightbox
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      linenums: false
+      linenums_style: pymdownx-inline
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+    - css/custom.css
