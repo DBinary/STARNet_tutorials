@@ -1,9 +1,7 @@
 # Welcome to STARNet documentation!
 
-![STARNet](img/STARNet.png)
-
 <div class="result" markdown>
-![omicverse-light](img/figure1.png#gh-light-mode-only)
+![omicverse-light](img/figure1.png)
 
 STARNet (**S**pa**T**i**A**l RNA-ATAC-seq gene **R**egulatory **Net**work) is a computational framework designed to decipher spatially specific gene regulatory networks (GRNs) from spatial RNA-ATAC-seq data.
 
