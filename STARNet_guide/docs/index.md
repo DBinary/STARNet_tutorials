@@ -9,7 +9,7 @@ STARNet (**S**pa**T**i**A**l RNA-ATAC-seq gene **R**egulatory **Net**work) is a 
 
 To get started with STARNet, please refer to our [Installation Guide](installation_guide.md) and [Tutorials](tutorials/Tutorial_1_GRN_Inference.ipynb).
 
-For more in-depth information about STARNet, you can also read our preprint.
+For more in-depth information about STARNet, you can also read our manuscript (only for editors and reviewers).
 
 </div>
 
