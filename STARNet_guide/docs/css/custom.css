@@ -134,3 +134,8 @@ div.doc-contents:not(.first) {
 .md-header__title .md-header__ellipsis {
   font-weight: 600;
 }
+
+/* Hide the site title/logo block at the top of the left sidebar */
+.md-sidebar--primary .md-nav__title {
+  display: none;
+}
