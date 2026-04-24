@@ -35,6 +35,17 @@ div.doc-contents:not(.first) {
     user-select: none;
 }
 
+/* ===== Bold titles ===== */
+.md-typeset h1 {
+  font-weight: 700 !important;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset h2 {
+  font-weight: 600 !important;
+  color: var(--md-default-fg-color);
+}
+
 /* ===== Grid cards styling to mimic Furo theme ===== */
 
 /* Increase card border radius */
@@ -80,4 +91,46 @@ div.doc-contents:not(.first) {
   .md-typeset .grid.cards {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* ===== Header restyling to mimic Furo white toolbar (light mode only) ===== */
+
+[data-md-color-scheme="default"] .md-header {
+  background-color: #fff;
+  color: var(--md-default-fg-color);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+[data-md-color-scheme="default"] .md-header__title {
+  color: var(--md-default-fg-color);
+}
+
+[data-md-color-scheme="default"] .md-header__button {
+  color: var(--md-default-fg-color);
+}
+
+[data-md-color-scheme="default"] .md-header__source {
+  color: var(--md-default-fg-color);
+}
+
+[data-md-color-scheme="default"] .md-search__form {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-md-color-scheme="default"] .md-search__input {
+  color: var(--md-default-fg-color);
+}
+
+[data-md-color-scheme="default"] .md-search__input::placeholder {
+  color: var(--md-default-fg-color--light);
+}
+
+[data-md-color-scheme="default"] .md-search__icon {
+  color: var(--md-default-fg-color--light);
+}
+
+/* Hide site name text in header to match Furo minimal toolbar */
+.md-header__title .md-header__ellipsis {
+  font-weight: 600;
 }

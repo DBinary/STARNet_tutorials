@@ -66,7 +66,6 @@ theme:
     - navigation.tracking
     - navigation.indexes
     - navigation.sections
-    - navigation.expand
 
 markdown_extensions:
   - admonition
