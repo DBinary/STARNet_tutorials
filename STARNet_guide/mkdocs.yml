@@ -4,7 +4,6 @@ site_author: "Lei Hu, Shichen Zhang, Xuting Zhang, Yihai Luo, and others"
 copyright: "Copyright &copy; 2025, AICB Lab, Westlake University"
 
 nav:
-- STARNet Documentation: index.md
 - STARNet Installation Guide: installation_guide.md
 - Tutorials:
     - Tutorial 1:
