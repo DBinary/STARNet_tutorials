@@ -7,9 +7,9 @@ version: 2
 
 # Set the version of Python and other tools you might need
 build:
-  os: ubuntu-20.04
+  os: ubuntu-22.04
   tools:
-    python: "3.9"
+    python: "3.11"
     # You can also specify other tool versions:
     # nodejs: "16"
     # rust: "1.55"
@@ -18,7 +18,7 @@ build:
 mkdocs:
   configuration: STARNet_guide/mkdocs.yml
 
-# If using Sphinx, optionally build your docs in additional formats such as PDF
+# Do not install STARNet package; only docs dependencies are needed
 # formats:
 #    - pdf
 
