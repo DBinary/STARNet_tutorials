@@ -9,9 +9,12 @@ def before_on_config(config, _plugin) -> None:
     root = Path(__file__).resolve().parent
     if str(root) not in sys.path:
         sys.path.insert(0, str(root))
-    # Add STARNet src directory so mkapi can import the package
-    starnet_src = Path("/data/hulei/STARNet_first_revision/STARNet/src")
-    if str(starnet_src) not in sys.path:
+    # Add STARNet src directory so mkapi can import the package.
+    # mkapi_config.py lives at STARNet_guide/STARNet_guide/mkapi_config.py
+    # STARNet src is at repo_root/src/, so relative path is ../../src
+    starnet_src = root / ".." / ".." / "src"
+    starnet_src = starnet_src.resolve()
+    if starnet_src.exists() and str(starnet_src) not in sys.path:
         sys.path.insert(0, str(starnet_src))
 
 
