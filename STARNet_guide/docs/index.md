@@ -1,6 +1,6 @@
 # STARNet Documentation
 
-## Spatially resolved inference of gene regulatory networks from spatial multi-omics data
+## A unified framework for spatial multi-omics gene regulatory network inference
 
 ![STARNet](img/figure1.png)
 
@@ -12,15 +12,11 @@ If you find STARNet useful for your research, please consider citing our [prepri
 
 -   :material-download: **Installation**
 
-    ---
-
     New to STARNet? Set up your environment with conda and pip.
 
     [:material-arrow-right: Installation Guide](installation_guide.md)
 
 -   :material-book-open-page-variant: **Tutorials**
-
-    ---
 
     Step-by-step tutorials covering GRN inference, spatial trajectory, GWAS analysis, and drug response.
 
@@ -28,15 +24,23 @@ If you find STARNet useful for your research, please consider citing our [prepri
 
 -   :material-code-braces: **API Reference**
 
-    ---
-
     Detailed description of every public module, class, and function in STARNet.
 
     [:material-arrow-right: API Reference](api/STARNet/grn/README.md)
 
--   :material-github: **GitHub**
+-   :material-notebook: **Release Notes**
 
-    ---
+    Track the latest updates, new features, and bug fixes in STARNet.
+
+    [:material-arrow-right: Release Notes](Release_notes.md)
+
+-   :material-hammer-wrench: **Developer Guide**
+
+    Contributing guidelines, coding standards, and development workflows.
+
+    [:material-arrow-right: Developer Guide](Developer_guild.md)
+
+-   :material-github: **GitHub**
 
     Find a bug? Interested in contributing? Check out our GitHub repository.
 

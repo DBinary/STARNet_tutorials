@@ -1,7 +1,7 @@
-mkdocs>=1.5.0,<1.6.0
+mkdocs>=1.5.0
 mkdocs-mermaid2-plugin==1.1.1
 mkdocs-jupyter
-mkdocs-material==9.1.2
+mkdocs-material==9.7.6
 mkdocs-glightbox==0.3.2
 mkdocstrings == 0.20.0
 mkdocs-gen-files ==0.4.0
