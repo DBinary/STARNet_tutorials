@@ -1,17 +1,50 @@
-# Welcome to STARNet documentation!
+# STARNet Documentation
 
-<div class="result" markdown>
-![omicverse-light](img/figure1.png)
+## Spatially resolved inference of gene regulatory networks from spatial multi-omics data
 
-STARNet (**S**pa**T**i**A**l RNA-ATAC-seq gene **R**egulatory **Net**work) is a computational framework designed to decipher spatially specific gene regulatory networks (GRNs) from spatial RNA-ATAC-seq data.
+![STARNet](img/figure1.png)
 
-To get started with STARNet, please refer to our [Installation Guide](installation_guide.md) and [Tutorials](tutorials/Tutorial_1_GRN_Inference.ipynb).
+**STARNet** (**S**pa**T**i**A**l RNA-ATAC-seq gene **R**egulatory **Net**work) is a computational framework designed to decipher spatially specific gene regulatory networks (GRNs) from spatial RNA-ATAC-seq and other spatial multi-omics data.
 
-For more in-depth information about STARNet, you can also read our manuscript (only for editors and reviewers) and [preprint](https://www.biorxiv.org/content/10.1101/2025.08.21.671434v2).
+If you find STARNet useful for your research, please consider citing our [preprint](https://www.biorxiv.org/content/10.1101/2025.08.21.671434v2).
+
+<div class="grid cards" markdown>
+
+-   :material-download: **Installation**
+
+    ---
+
+    New to STARNet? Set up your environment with conda and pip.
+
+    [:octicons-arrow-right-24: Installation Guide](installation_guide.md)
+
+-   :material-book-open-page-variant: **Tutorials**
+
+    ---
+
+    Step-by-step tutorials covering GRN inference, spatial trajectory, GWAS analysis, and drug response.
+
+    [:octicons-arrow-right-24: Tutorials](tutorials/Tutorial_1_GRN_Inference.ipynb)
+
+-   :material-code-braces: **API Reference**
+
+    ---
+
+    Detailed description of every public module, class, and function in STARNet.
+
+    [:octicons-arrow-right-24: API Reference](api/index.md)
+
+-   :material-github: **GitHub**
+
+    ---
+
+    Find a bug? Interested in contributing? Check out our GitHub repository.
+
+    [:octicons-arrow-right-24: GitHub](https://github.com/DBinary/STARNet)
 
 </div>
 
-<div class="Contact" markdown>
+---
 
 ## Contact
 
@@ -19,4 +52,3 @@ For more in-depth information about STARNet, you can also read our manuscript (o
 - Shichen Zhang ([zhangshichen@westlake.edu.cn](mailto:zhangshichen@westlake.edu.cn))
 - [Xuting Zhang](https://lxzcpro.github.io/) ([zhangxuting@westlake.edu.cn](mailto:zhangxuting@westlake.edu.cn))
 - Yihai Luo ([luoyihai@westlake.edu.cn](mailto:luoyihai@westlake.edu.cn))
-</div>

@@ -1,40 +1,71 @@
-# STARNet Installation
+# STARNet Installation Guide
 
-Currently, `STARNet` is not available for direct installation from PyPI (the Python Package Index). To use the package, you must clone the source code from its Git repository and install it locally.
+## Prerequisites
 
-### Installation Steps
+STARNet requires **Python 3.11**. Other Python versions are not claimed as supported unless separately validated.
 
-Follow these steps in your terminal to get `STARNet` set up in your local environment.
+We recommend installing STARNet within a `conda` environment to avoid dependency conflicts.
+
+### Platform Requirements
+
+STARNet is developed and tested on Linux. macOS and Windows (WSL) may work but are not actively validated.
+
+## Installation Methods
+
+### Source Installation (Recommended)
+
+Currently, STARNet is not available on PyPI. Install directly from the GitHub repository:
 
 **1. Clone the Repository**
-
-First, use `git` to clone the `STARNet` repository to your local machine.
 
 ```bash
 git clone https://github.com/DBinary/STARNet.git
 ```
 
+**2. Create and Activate a Conda Environment**
 
-**2. Navigate to the Directory**
+```bash
+conda create -n starnet python=3.11
+conda activate starnet
+```
 
-Once the repository is cloned, change your current directory to the newly created `STARNet` folder.
+**3. Install STARNet**
 
 ```bash
 cd STARNet
-```
-
-**3. Install the Package**
-
-Now, you can install the package using `pip`.
-
-```bash
 pip install -e .
 ```
 
-### Usage
+### Unified Environment Installation
 
-After the installation is complete, you can import and use `STARNet` in your Python scripts or interactive sessions like this:
+For a validated, reproducible environment with pinned dependencies:
+
+```bash
+conda env create -f environment-review.yml
+conda activate starnet-review
+python -m pip install -e .
+```
+
+This method uses the `environment-review.yml` file bundled in the repository and is the preferred workflow for reproducing manuscript results.
+
+## Usage
+
+After installation, verify that STARNet imports correctly:
 
 ```python
 import STARNet as ST
 ```
+
+## Troubleshooting
+
+### libstdc++ / CXXABI Errors
+
+On some systems, the system `libstdc++` may be picked before the active conda environment, causing errors for optional genomics tooling. If this happens, export the active environment library path before running GRN inference:
+
+```bash
+export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:$LD_LIBRARY_PATH"
+```
+
+### GPU Support
+
+For GPU acceleration, install the appropriate CuPy build for your CUDA toolkit after installing STARNet.
