@@ -32,7 +32,7 @@ If you find STARNet useful for your research, please consider citing our [prepri
 
     Detailed description of every public module, class, and function in STARNet.
 
-    [:octicons-arrow-right-24: API Reference](api/index.md)
+    [:octicons-arrow-right-24: API Reference](api/STARNet/grn/README.md)
 
 -   :material-github: **GitHub**
 
