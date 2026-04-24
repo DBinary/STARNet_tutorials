@@ -16,7 +16,7 @@ If you find STARNet useful for your research, please consider citing our [prepri
 
     New to STARNet? Set up your environment with conda and pip.
 
-    [:octicons-arrow-right-24: Installation Guide](installation_guide.md)
+    [:material-arrow-right: Installation Guide](installation_guide.md)
 
 -   :material-book-open-page-variant: **Tutorials**
 
@@ -24,7 +24,7 @@ If you find STARNet useful for your research, please consider citing our [prepri
 
     Step-by-step tutorials covering GRN inference, spatial trajectory, GWAS analysis, and drug response.
 
-    [:octicons-arrow-right-24: Tutorials](tutorials/Tutorial_1_GRN_Inference.ipynb)
+    [:material-arrow-right: Tutorials](tutorials/Tutorial_1_GRN_Inference.ipynb)
 
 -   :material-code-braces: **API Reference**
 
@@ -32,7 +32,7 @@ If you find STARNet useful for your research, please consider citing our [prepri
 
     Detailed description of every public module, class, and function in STARNet.
 
-    [:octicons-arrow-right-24: API Reference](api/STARNet/grn/README.md)
+    [:material-arrow-right: API Reference](api/STARNet/grn/README.md)
 
 -   :material-github: **GitHub**
 
@@ -40,7 +40,7 @@ If you find STARNet useful for your research, please consider citing our [prepri
 
     Find a bug? Interested in contributing? Check out our GitHub repository.
 
-    [:octicons-arrow-right-24: GitHub](https://github.com/DBinary/STARNet)
+    [:material-arrow-right: GitHub](https://github.com/DBinary/STARNet)
 
 </div>
 

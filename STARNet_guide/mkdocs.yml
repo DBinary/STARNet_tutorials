@@ -61,8 +61,8 @@ theme:
     - navigation.instant
     - navigation.tracking
     - navigation.indexes
-    - navigation.tabs
     - navigation.sections
+    - navigation.expand
 
 markdown_extensions:
   - admonition
@@ -83,6 +83,9 @@ markdown_extensions:
       linenums_style: pymdownx-inline
   - pymdownx.superfences
   - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
