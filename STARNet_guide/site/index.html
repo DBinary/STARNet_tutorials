@@ -35,13 +35,13 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#welcome-to-starnet-documentation">
+<a class="md-skip" href="#starnet-documentation">
           Skip to content
         </a>
 </div>
 <div data-md-component="announce">
 </div>
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="STARNet Readthedocs" class="md-header__button md-logo" data-md-component="logo" href="." title="STARNet Readthedocs">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
@@ -88,12 +88,48 @@
 </nav>
 </header>
 <div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href=".">
+      Index
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="installation_guide/">
+      Installation Guide
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="tutorials/Tutorial_1_GRN_Inference/">
+        Tutorials
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="Release_notes/">
+      Release Notes
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="Developer_guild/">
+      Developer Guide
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="https://github.com/DBinary/STARNet">
+      GitHub
+    </a>
+</li>
+</ul>
+</div>
+</nav>
 <main class="md-main" data-md-component="main">
 <div class="md-main__inner md-grid">
 <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
-<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
 <a aria-label="STARNet Readthedocs" class="md-nav__button md-logo" data-md-component="logo" href="." title="STARNet Readthedocs">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
@@ -127,6 +163,11 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#spatially-resolved-inference-of-gene-regulatory-networks-from-spatial-multi-omics-data">
+    Spatially resolved inference of gene regulatory networks from spatial multi-omics data
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#contact">
     Contact
   </a>
@@ -151,16 +192,16 @@
           Tutorials
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_1" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
-          GRN Inference
+          Tutorial 1
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-expanded="false" aria-labelledby="__nav_3_1_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_1">
 <span class="md-nav__icon md-icon"></span>
-          GRN Inference
+          Tutorial 1
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -171,16 +212,16 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
-          Spatial Trajectory
+          Tutorial 2
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_2">
 <span class="md-nav__icon md-icon"></span>
-          Spatial Trajectory
+          Tutorial 2
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -196,16 +237,16 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
-          GWAS Analysis
+          Tutorial 3
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
-          GWAS Analysis
+          Tutorial 3
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -221,16 +262,16 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
-          Drug Response
+          Tutorial 4
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-expanded="false" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_4">
 <span class="md-nav__icon md-icon"></span>
-          Drug Response
+          Tutorial 4
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -249,6 +290,21 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="Release_notes/">
+        Release Notes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="Developer_guild/">
+        Developer Guide
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://github.com/DBinary/STARNet">
+        GitHub
+      </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -264,6 +320,11 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#spatially-resolved-inference-of-gene-regulatory-networks-from-spatial-multi-omics-data">
+    Spatially resolved inference of gene regulatory networks from spatial multi-omics data
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#contact">
     Contact
   </a>
@@ -275,14 +336,40 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="welcome-to-starnet-documentation">Welcome to STARNet documentation!<a class="headerlink" href="#welcome-to-starnet-documentation" title="Permanent link">¶</a></h1>
-<div class="result">
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="img/figure1.png"><img alt="omicverse-light" src="img/figure1.png"/></a></p>
-<p>STARNet (<strong>S</strong>pa<strong>T</strong>i<strong>A</strong>l RNA-ATAC-seq gene <strong>R</strong>egulatory <strong>Net</strong>work) is a computational framework designed to decipher spatially specific gene regulatory networks (GRNs) from spatial RNA-ATAC-seq data.</p>
-<p>To get started with STARNet, please refer to our <a href="installation_guide/">Installation Guide</a> and <a href="tutorials/Tutorial_1_GRN_Inference/">Tutorials</a>.</p>
-<p>For more in-depth information about STARNet, you can also read our manuscript (only for editors and reviewers) and <a href="https://www.biorxiv.org/content/10.1101/2025.08.21.671434v2">preprint</a>.</p>
+<h1 id="starnet-documentation">STARNet Documentation<a class="headerlink" href="#starnet-documentation" title="Permanent link">¶</a></h1>
+<h2 id="spatially-resolved-inference-of-gene-regulatory-networks-from-spatial-multi-omics-data">Spatially resolved inference of gene regulatory networks from spatial multi-omics data<a class="headerlink" href="#spatially-resolved-inference-of-gene-regulatory-networks-from-spatial-multi-omics-data" title="Permanent link">¶</a></h2>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="img/figure1.png"><img alt="STARNet" src="img/figure1.png"/></a></p>
+<p><strong>STARNet</strong> (<strong>S</strong>pa<strong>T</strong>i<strong>A</strong>l RNA-ATAC-seq gene <strong>R</strong>egulatory <strong>Net</strong>work) is a computational framework designed to decipher spatially specific gene regulatory networks (GRNs) from spatial RNA-ATAC-seq and other spatial multi-omics data.</p>
+<p>If you find STARNet useful for your research, please consider citing our <a href="https://www.biorxiv.org/content/10.1101/2025.08.21.671434v2">preprint</a>.</p>
+<div class="grid cards">
+<ul>
+<li>
+<p>:material-download: <strong>Installation</strong></p>
+<hr/>
+<p>New to STARNet? Set up your environment with conda and pip.</p>
+<p><a href="installation_guide/">:octicons-arrow-right-24: Installation Guide</a></p>
+</li>
+<li>
+<p>:material-book-open-page-variant: <strong>Tutorials</strong></p>
+<hr/>
+<p>Step-by-step tutorials covering GRN inference, spatial trajectory, GWAS analysis, and drug response.</p>
+<p><a href="tutorials/Tutorial_1_GRN_Inference/">:octicons-arrow-right-24: Tutorials</a></p>
+</li>
+<li>
+<p>:material-code-braces: <strong>API Reference</strong></p>
+<hr/>
+<p>Detailed description of every public module, class, and function in STARNet.</p>
+<p><a href="api/STARNet/grn/">:octicons-arrow-right-24: API Reference</a></p>
+</li>
+<li>
+<p>:material-github: <strong>GitHub</strong></p>
+<hr/>
+<p>Find a bug? Interested in contributing? Check out our GitHub repository.</p>
+<p><a href="https://github.com/DBinary/STARNet">:octicons-arrow-right-24: GitHub</a></p>
+</li>
+</ul>
 </div>
-<div class="Contact">
+<hr/>
 <h2 id="contact">Contact<a class="headerlink" href="#contact" title="Permanent link">¶</a></h2>
 <ul>
 <li><a href="https://dbinary.github.io">Lei Hu</a> (<a href="mailto:hulei@westlake.edu.cn">hulei@westlake.edu.cn</a>)</li>
@@ -290,7 +377,6 @@
 <li><a href="https://lxzcpro.github.io/">Xuting Zhang</a> (<a href="mailto:zhangxuting@westlake.edu.cn">zhangxuting@westlake.edu.cn</a>)</li>
 <li>Yihai Luo (<a href="mailto:luoyihai@westlake.edu.cn">luoyihai@westlake.edu.cn</a>)</li>
 </ul>
-</div>
 </article>
 </div>
 </div>
@@ -316,7 +402,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.tracking", "navigation.indexes", "navigation.tabs", "navigation.sections"], "search": "assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
 <script src="assets/javascripts/bundle.fc8c2696.min.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

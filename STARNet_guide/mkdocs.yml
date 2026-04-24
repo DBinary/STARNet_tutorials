@@ -18,10 +18,10 @@ nav:
     - Tutorial 4:
         - GRN Inference: tutorials/Tutorial_4_GRN_Inference.ipynb
         - Drug Response: tutorials/Tutorial_4_Drug_Response.ipynb
-- API documentation:
-    - GRN: $api/STARNet.grn
-    - Preprocessing: $api/STARNet.pp
-    - Plotting: $api/STARNet.pl
+# - API documentation:
+#     - GRN: $api/STARNet.grn
+#     - Preprocessing: $api/STARNet.pp
+#     - Plotting: $api/STARNet.pl
 - Release Notes: Release_notes.md
 - Developer Guide: Developer_guild.md
 - GitHub: https://github.com/DBinary/STARNet
@@ -31,17 +31,17 @@ plugins:
       include_requirejs: true
   - mermaid2
   - glightbox
-  - mkapi:
-      config: mkapi_config.py
-      exclude:
-        - STARNet.external
-        - STARNet.external.*
-        - torch
-        - torch.*
-        - lightning
-        - lightning.*
-        - torch_geometric
-        - torch_geometric.*
+  # - mkapi:
+  #     config: mkapi_config.py
+  #     exclude:
+  #       - STARNet.external
+  #       - STARNet.external.*
+  #       - torch
+  #       - torch.*
+  #       - lightning
+  #       - lightning.*
+  #       - torch_geometric
+  #       - torch_geometric.*
 
 theme:
   name: material
