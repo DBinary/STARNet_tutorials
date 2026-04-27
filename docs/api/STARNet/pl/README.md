@@ -1,0 +1,3 @@
+# STARNet.pl
+
+Plotting module.
