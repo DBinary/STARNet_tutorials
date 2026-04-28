@@ -2,7 +2,7 @@
 
 ## A unified framework for spatial multi-omics gene regulatory network inference
 
-![STARNet](img/figure1_tutorials.pdf)
+![STARNet](img/figure1_tutorials.png)
 
 **STARNet** (**S**pa**T**i**A**l RNA-ATAC-seq gene **R**egulatory **Net**work) is a computational framework designed to decipher spatially specific gene regulatory networks (GRNs) from spatial RNA-ATAC-seq and other spatial multi-omics data.
 
