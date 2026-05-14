@@ -12,13 +12,20 @@ STARNet is developed and tested on Linux. macOS and Windows (WSL) may work but a
 
 ## Installation Methods
 
+First, clone the official STARNet repository and enter the repository root:
+
+```bash
+git clone https://github.com/DBinary/STARNet.git
+cd STARNet
+```
+
 ### Quick Install (Recommended)
 
-The quick installer creates a ready-to-use STARNet environment from the files bundled with this repository. It will:
+The quick installer creates a ready-to-use STARNet environment from the files bundled with the cloned repository. It will:
 
 - create or update a dedicated conda environment
 - install the pinned Python dependencies
-- install STARNet in editable mode from the local `STARNet/` source tree
+- install STARNet in editable mode from the local repository checkout
 - verify that `import STARNet as ST` succeeds
 
 ```bash
@@ -38,21 +45,21 @@ If you prefer to run the steps manually, create the conda environment first and 
 #### Mamba
 
 ```bash
-mamba env create -n starnet -f STARNet/environment-conda.yml
-conda run -n starnet python -m pip install -r STARNet/requirements-review.txt || \
+mamba env create -n starnet -f environment-conda.yml
+conda run -n starnet python -m pip install -r requirements-review.txt || \
   PIP_CONFIG_FILE=/dev/null PIP_INDEX_URL=https://pypi.org/simple PIP_EXTRA_INDEX_URL= \
-  conda run -n starnet python -m pip install -r STARNet/requirements-review.txt
-conda run -n starnet python -m pip install --no-deps --no-build-isolation -e STARNet
+  conda run -n starnet python -m pip install -r requirements-review.txt
+conda run -n starnet python -m pip install --no-deps --no-build-isolation -e .
 ```
 
 #### Conda
 
 ```bash
-conda env create -n starnet -f STARNet/environment-conda.yml
-conda run -n starnet python -m pip install -r STARNet/requirements-review.txt || \
+conda env create -n starnet -f environment-conda.yml
+conda run -n starnet python -m pip install -r requirements-review.txt || \
   PIP_CONFIG_FILE=/dev/null PIP_INDEX_URL=https://pypi.org/simple PIP_EXTRA_INDEX_URL= \
-  conda run -n starnet python -m pip install -r STARNet/requirements-review.txt
-conda run -n starnet python -m pip install --no-deps --no-build-isolation -e STARNet
+  conda run -n starnet python -m pip install -r requirements-review.txt
+conda run -n starnet python -m pip install --no-deps --no-build-isolation -e .
 ```
 
 After either method, activate the environment:
@@ -80,9 +87,9 @@ The STARNet environment installs GPU-enabled PyTorch dependencies, so the downlo
 For manual installation, use the same fallback pattern:
 
 ```bash
-conda run -n starnet python -m pip install -r STARNet/requirements-review.txt || \
+conda run -n starnet python -m pip install -r requirements-review.txt || \
   PIP_CONFIG_FILE=/dev/null PIP_INDEX_URL=https://pypi.org/simple PIP_EXTRA_INDEX_URL= \
-  conda run -n starnet python -m pip install -r STARNet/requirements-review.txt
+  conda run -n starnet python -m pip install -r requirements-review.txt
 ```
 
 ### libstdc++ / CXXABI Errors
