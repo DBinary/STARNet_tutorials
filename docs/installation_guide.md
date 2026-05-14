@@ -1,6 +1,6 @@
 # STARNet Installation Guide
 
-STARNet is installed from source. The recommended workflow below clones the official STARNet repository, creates a fresh conda environment, installs the pinned dependencies, and verifies the import.
+STARNet is installed from source. The recommended workflow below clones the official STARNet repository, creates a fresh environment, installs the pinned dependencies, and verifies the import.
 
 ::::{grid} 1 1 3 3
 :gutter: 2
@@ -10,7 +10,7 @@ Get the official STARNet source repository.
 :::
 
 :::{grid-item-card} 2. Install
-Run the quick installer to create a reproducible `starnet` environment.
+Create a reproducible `starnet` environment with micromamba.
 :::
 
 :::{grid-item-card} 3. Verify
@@ -22,42 +22,35 @@ Activate the environment and confirm that `import STARNet as ST` works.
 ## Prerequisites
 
 - Linux is the validated platform. macOS and Windows through WSL may work but are not actively tested.
-- A working `conda` or `mamba` installation is required.
+- A working `micromamba` or `conda` installation is required.
 - Python **3.11** is used by the validated environment in this repository.
 - GPU-enabled dependencies are installed by default because STARNet's GRN workflows use GPU-accelerated model components.
 
 ## Quick Install
 
-Use this path unless you need to customize each installation step.
+Use this micromamba path unless you need to customize each installation step.
 
 ```bash
 git clone https://github.com/DBinary/STARNet.git
 cd STARNet
-bash install.sh
+micromamba env create -n starnet -f environment-conda.yml
+micromamba run -n starnet python -m pip install -r requirements-review.txt || \
+  PIP_CONFIG_FILE=/dev/null PIP_INDEX_URL=https://pypi.org/simple PIP_EXTRA_INDEX_URL= \
+  micromamba run -n starnet python -m pip install -r requirements-review.txt
+micromamba run -n starnet python -m pip install --no-deps --no-build-isolation -e .
+micromamba activate starnet
 ```
 
-The installer will:
+These commands will:
 
-- create or update a dedicated conda environment named `starnet`
+- create a dedicated environment named `starnet`
 - install the pinned Python dependencies
 - install STARNet in editable mode from the local repository checkout
-- verify that `import STARNet as ST` succeeds
-
-To use a different environment name:
-
-```bash
-bash install.sh --env-name starnet-review
-```
-
-After installation, activate the environment:
-
-```bash
-conda activate starnet
-```
+- activate the environment for tutorial use
 
 ## Manual Install
 
-If you prefer to run the steps manually, clone the repository first:
+If you prefer conda, or want to compare the full command sequence by environment manager, clone the repository first:
 
 ```bash
 git clone https://github.com/DBinary/STARNet.git
@@ -66,14 +59,14 @@ cd STARNet
 
 ::::{tab-set}
 
-:::{tab-item} Mamba
+:::{tab-item} Micromamba
 ```bash
-mamba env create -n starnet -f environment-conda.yml
-conda run -n starnet python -m pip install -r requirements-review.txt || \
+micromamba env create -n starnet -f environment-conda.yml
+micromamba run -n starnet python -m pip install -r requirements-review.txt || \
   PIP_CONFIG_FILE=/dev/null PIP_INDEX_URL=https://pypi.org/simple PIP_EXTRA_INDEX_URL= \
-  conda run -n starnet python -m pip install -r requirements-review.txt
-conda run -n starnet python -m pip install --no-deps --no-build-isolation -e .
-conda activate starnet
+  micromamba run -n starnet python -m pip install -r requirements-review.txt
+micromamba run -n starnet python -m pip install --no-deps --no-build-isolation -e .
+micromamba activate starnet
 ```
 :::
 
@@ -102,19 +95,33 @@ import STARNet as ST
 
 ### pip Mirror / Wheel Download Errors
 
-STARNet installs GPU-enabled PyTorch dependencies, so downloads can be large. The quick installer uses your active `pip` configuration first. If that fails during wheel download, it retries once with official PyPI.
+STARNet installs GPU-enabled PyTorch dependencies, so downloads can be large. The quick install commands use your active `pip` configuration first. If that fails during wheel download, retry once with official PyPI.
 
 For manual installation, use the same fallback pattern:
 
+::::{tab-set}
+
+:::{tab-item} Micromamba
+```bash
+micromamba run -n starnet python -m pip install -r requirements-review.txt || \
+  PIP_CONFIG_FILE=/dev/null PIP_INDEX_URL=https://pypi.org/simple PIP_EXTRA_INDEX_URL= \
+  micromamba run -n starnet python -m pip install -r requirements-review.txt
+```
+:::
+
+:::{tab-item} Conda
 ```bash
 conda run -n starnet python -m pip install -r requirements-review.txt || \
   PIP_CONFIG_FILE=/dev/null PIP_INDEX_URL=https://pypi.org/simple PIP_EXTRA_INDEX_URL= \
   conda run -n starnet python -m pip install -r requirements-review.txt
 ```
+:::
+
+::::
 
 ### libstdc++ / CXXABI Errors
 
-On some systems, the system `libstdc++` may be picked before the active conda environment, causing errors for optional genomics tooling. If this happens, export the active environment library path before running GRN inference:
+On some systems, the system `libstdc++` may be picked before the active environment, causing errors for optional genomics tooling. If this happens, export the active environment library path before running GRN inference:
 
 ```bash
 export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:$LD_LIBRARY_PATH"
