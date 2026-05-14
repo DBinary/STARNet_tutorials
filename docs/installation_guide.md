@@ -1,78 +1,98 @@
 # STARNet Installation Guide
 
+STARNet is installed from source. The recommended workflow below clones the official STARNet repository, creates a fresh conda environment, installs the pinned dependencies, and verifies the import.
+
+::::{grid} 1 1 3 3
+:gutter: 2
+
+:::{grid-item-card} 1. Clone
+Get the official STARNet source repository.
+:::
+
+:::{grid-item-card} 2. Install
+Run the quick installer to create a reproducible `starnet` environment.
+:::
+
+:::{grid-item-card} 3. Verify
+Activate the environment and confirm that `import STARNet as ST` works.
+:::
+
+::::
+
 ## Prerequisites
 
-STARNet currently supports **Python 3.11** for the validated installation workflow in this repository.
+- Linux is the validated platform. macOS and Windows through WSL may work but are not actively tested.
+- A working `conda` or `mamba` installation is required.
+- Python **3.11** is used by the validated environment in this repository.
+- GPU-enabled dependencies are installed by default because STARNet's GRN workflows use GPU-accelerated model components.
 
-We recommend installing STARNet inside a fresh `conda` or `mamba` environment to avoid dependency conflicts.
+## Quick Install
 
-### Platform Requirements
+Use this path unless you need to customize each installation step.
 
-STARNet is developed and tested on Linux. macOS and Windows (WSL) may work but are not actively validated.
+```bash
+git clone https://github.com/DBinary/STARNet.git
+cd STARNet
+bash install.sh
+```
 
-## Installation Methods
+The installer will:
 
-First, clone the official STARNet repository and enter the repository root:
+- create or update a dedicated conda environment named `starnet`
+- install the pinned Python dependencies
+- install STARNet in editable mode from the local repository checkout
+- verify that `import STARNet as ST` succeeds
+
+To use a different environment name:
+
+```bash
+bash install.sh --env-name starnet-review
+```
+
+After installation, activate the environment:
+
+```bash
+conda activate starnet
+```
+
+## Manual Install
+
+If you prefer to run the steps manually, clone the repository first:
 
 ```bash
 git clone https://github.com/DBinary/STARNet.git
 cd STARNet
 ```
 
-### Quick Install (Recommended)
+::::{tab-set}
 
-The quick installer creates a ready-to-use STARNet environment from the files bundled with the cloned repository. It will:
-
-- create or update a dedicated conda environment
-- install the pinned Python dependencies
-- install STARNet in editable mode from the local repository checkout
-- verify that `import STARNet as ST` succeeds
-
-```bash
-bash install.sh
-```
-
-By default this creates an environment named `starnet`, uses your existing `conda` and `pip` mirror configuration first, and installs the GPU-enabled dependency set pinned in this repository. If the active pip mirror fails during wheel download, the installer retries once with official PyPI. You can override the environment name if needed:
-
-```bash
-bash install.sh --env-name starnet-review
-```
-
-### Conda / Mamba Installation
-
-If you prefer to run the steps manually, create the conda environment first and then install the pinned Python packages.
-
-#### Mamba
-
+:::{tab-item} Mamba
 ```bash
 mamba env create -n starnet -f environment-conda.yml
 conda run -n starnet python -m pip install -r requirements-review.txt || \
   PIP_CONFIG_FILE=/dev/null PIP_INDEX_URL=https://pypi.org/simple PIP_EXTRA_INDEX_URL= \
   conda run -n starnet python -m pip install -r requirements-review.txt
 conda run -n starnet python -m pip install --no-deps --no-build-isolation -e .
+conda activate starnet
 ```
+:::
 
-#### Conda
-
+:::{tab-item} Conda
 ```bash
 conda env create -n starnet -f environment-conda.yml
 conda run -n starnet python -m pip install -r requirements-review.txt || \
   PIP_CONFIG_FILE=/dev/null PIP_INDEX_URL=https://pypi.org/simple PIP_EXTRA_INDEX_URL= \
   conda run -n starnet python -m pip install -r requirements-review.txt
 conda run -n starnet python -m pip install --no-deps --no-build-isolation -e .
-```
-
-After either method, activate the environment:
-
-```bash
 conda activate starnet
 ```
+:::
 
-This pinned environment is the most stable installation path for users and the preferred workflow for reproducing the tutorial and manuscript environment.
+::::
 
-## Usage
+## Verify
 
-After installation, verify that STARNet imports correctly:
+After activation, verify that STARNet imports correctly:
 
 ```python
 import STARNet as ST
@@ -82,7 +102,7 @@ import STARNet as ST
 
 ### pip Mirror / Wheel Download Errors
 
-The STARNet environment installs GPU-enabled PyTorch dependencies, so the download can be large. The quick installer uses your active `pip` configuration first. If the active pip mirror fails, it retries once with official PyPI automatically.
+STARNet installs GPU-enabled PyTorch dependencies, so downloads can be large. The quick installer uses your active `pip` configuration first. If that fails during wheel download, it retries once with official PyPI.
 
 For manual installation, use the same fallback pattern:
 
