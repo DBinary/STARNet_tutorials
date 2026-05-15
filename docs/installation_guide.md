@@ -45,9 +45,10 @@ The recommended approach uses conda. Switch to the micromamba tab if you prefer 
 
 **Estimated time**: 5–20 minutes depending on network speed (most time is spent downloading ~3 GB of packages).
 
-````{tab-set}
+::::{tab-set}
 
-```{tab-item} Conda (recommended)
+:::{tab-item} Conda (recommended)
+```bash
 git clone https://github.com/DBinary/STARNet.git
 cd STARNet
 conda env create -n starnet -f environment-conda.yml
@@ -55,8 +56,10 @@ conda run -n starnet python -m pip install -r requirements-review.txt
 conda run -n starnet python -m pip install --no-deps -e .
 conda activate starnet
 ```
+:::
 
-```{tab-item} Micromamba
+:::{tab-item} Micromamba
+```bash
 git clone https://github.com/DBinary/STARNet.git
 cd STARNet
 micromamba env create -n starnet -f environment-conda.yml
@@ -64,8 +67,9 @@ micromamba run -n starnet python -m pip install -r requirements-review.txt
 micromamba run -n starnet python -m pip install --no-deps -e .
 micromamba activate starnet
 ```
+:::
 
-````
+::::
 
 :::{note}
 The `pip install -r requirements-review.txt` step installs all runtime dependencies (~200 packages). The subsequent `pip install --no-deps -e .` only registers STARNet itself — it assumes the requirements step succeeded, so **do not skip or reorder these steps**.
@@ -110,19 +114,23 @@ THESE PACKAGES DO NOT MATCH THE HASHES
 
 If you hit this, remove the `-i` flag and retry with the default PyPI index:
 
-````{tab-set}
+::::{tab-set}
 
-```{tab-item} Conda
+:::{tab-item} Conda
+```bash
 conda run -n starnet python -m pip install \
   -r requirements-review.txt
 ```
+:::
 
-```{tab-item} Micromamba
+:::{tab-item} Micromamba
+```bash
 micromamba run -n starnet python -m pip install \
   -r requirements-review.txt
 ```
+:::
 
-````
+::::
 
 ### libstdc++ / CXXABI Errors
 
