@@ -39,15 +39,23 @@ nvidia-smi  # check GPU driver / CUDA version
 ```
 :::
 
-## Install
+## Quick Install
 
-The recommended approach uses conda. Switch to the micromamba tab if you prefer it.
+```bash
+git clone https://github.com/DBinary/STARNet.git
+cd STARNet
+bash install.sh
+```
 
-**Estimated time**: 5–20 minutes depending on network speed (most time is spent downloading ~3 GB of packages).
+This script auto-detects conda or micromamba, creates the environment, installs all dependencies, and verifies the import.
+
+## Manual Install
+
+If you prefer micromamba, or want to step through the commands individually:
 
 ::::{tab-set}
 
-:::{tab-item} Conda (recommended)
+:::{tab-item} Conda
 ```bash
 git clone https://github.com/DBinary/STARNet.git
 cd STARNet
