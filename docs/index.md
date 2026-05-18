@@ -32,14 +32,14 @@ Step-by-step tutorials covering GRN inference across datasets and downstream app
 Detailed description of every public module, class, and function in STARNet.
 :::
 
-:::{grid-item-card} Release Notes {octicon}`notebook;1em;`
+:::{grid-item-card} Release Notes {octicon}`note;1em;`
 :link: Release_notes
 :link-type: doc
 
 Track the latest updates, new features, and bug fixes in STARNet.
 :::
 
-:::{grid-item-card} Developer Guide {octicon}`hammer;1em;`
+:::{grid-item-card} Developer Guide {octicon}`tools;1em;`
 :link: Developer_guild
 :link-type: doc
 
