@@ -21,8 +21,18 @@
 
 /* Sidebar logo sizing */
 .sidebar-logo {
-    max-width: 180px;
+    max-width: 240px;
+    width: 100%;
     margin: 0 auto;
+}
+
+/* Light mode sidebar background to white */
+.sidebar-drawer {
+    background: #ffffff;
+}
+
+body[data-theme="dark"] .sidebar-drawer {
+    background: var(--starnet-dark-bg1, #151a19);
 }
 
 /* Card hover effect (sphinx-design grid cards) */
