@@ -166,8 +166,8 @@ intersphinx_mapping = {
 
 # -- HTML / Furo --------------------------------------------------------------
 html_theme = "furo"
-html_title = project
-# html_logo = "_static/logo.png"
+html_title = "STARNet Documentation"
+html_logo = "_static/logo.png"
 # html_favicon = "_static/favicon.ico"
 
 html_theme_options = {
