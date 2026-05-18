@@ -22,7 +22,7 @@ New to STARNet? Set up your environment with conda and pip.
 :link: tutorials/index
 :link-type: doc
 
-Step-by-step tutorials covering GRN inference, spatial trajectory, GWAS analysis, and drug response.
+Step-by-step tutorials covering GRN inference across datasets and downstream applications.
 :::
 
 :::{grid-item-card} API Reference {octicon}`book;1em;`

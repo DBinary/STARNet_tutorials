@@ -36,16 +36,16 @@ STARNet (**S**pa**T**i**A**l RNA-ATAC-seq gene **R**egulatory **Net**work) is a 
 - Core workflows centered on `ST.model.STARNet(...).preprocess()` and `ST.grn.infer_grn_from_multiomics()`.
 - Downstream analysis utilities including `ST.pp.extract_peak_gene_associations()`, `ST.pp.score_all_grn()`, and `ST.pp.score_TF_module()`.
 - GWAS-related utilities such as `ST.pp.process_gwas_sumstats()` and SNP / GRN association functions.
-- Online documentation and tutorial notebooks for GRN inference, spatial trajectory analysis, GWAS analysis, and drug response workflows.
+- Online documentation and tutorial notebooks for GRN inference across datasets, GWAS analysis, and drug response workflows.
 
 ## Documentation and Tutorials
 
 - Online documentation: [starnet-tutorials.readthedocs.io](https://starnet-tutorials.readthedocs.io/)
 - Installation guide: [STARNet_guide/docs/installation_guide.md](STARNet_guide/docs/installation_guide.md)
-- Tutorial notebook: [GRN Inference](STARNet_guide/docs/tutorials/Tutorial_1_GRN_Inference.ipynb)
-- Tutorial notebook: [Spatial Trajectory](STARNet_guide/docs/tutorials/Tutorial_2_Spatial_Trajectory.ipynb)
-- Tutorial notebook: [GWAS Analysis](STARNet_guide/docs/tutorials/Tutorial_3_GWAS_Analysis.ipynb)
-- Tutorial notebook: [Drug Response](STARNet_guide/docs/tutorials/Tutorial_4_Drug_Response.ipynb)
+- Tutorial index: [docs/tutorials/index.md](docs/tutorials/index.md)
+- GRN inference example: [P21 Mouse Brain](docs/tutorials/GRN_Inference_P21_Mouse_Brain.ipynb)
+- Application example: [GWAS Analysis](docs/tutorials/Application_GWAS_Analysis.ipynb)
+- Application example: [Drug Response](docs/tutorials/Application_Drug_Response.ipynb)
 
 ## Installation
 
