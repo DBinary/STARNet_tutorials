@@ -1,5 +1,7 @@
 # API Reference
 
+<p style="color: red; font-weight: bold;">The API reference will be made available after the paper is accepted.</p>
+
 Welcome to the STARNet API reference. This section provides detailed documentation for all public modules, classes, and functions in STARNet.
 
 ```{toctree}
